@@ -71,7 +71,8 @@ escritos en lenguaje ensamblador MIPS.
 -   **Desarrollo de software**: Se puede utilizar para desarrollar pequeños programas en ensamblador MIPS, especialmente para aplicaciones
     embebidas donde se requiere un alto nivel de control sobre el hardware.
 
-> [!IMPORTANT] Los requisitos para poder continuar con este contenido son: Vscode y las extensiones de "MARS MIPS Support for VSCode"
+> [!IMPORTANT]
+> Los requisitos para poder continuar con este contenido son: Vscode y las extensiones de "MARS MIPS Support for VSCode"
 
 A partir de ahora se entrará en contenido de ensamblador MIPS32, y se harán ejercicios para practicar.
 
@@ -152,7 +153,7 @@ procesador puede realizar directamente y que se combinan para formar programas m
     - **Suma**: La instrucción `add` se utiliza para realizar la suma de dos números enteros y almacenar el resultado en un tercer registro.
       Su formato general es el siguiente:
 
-        ```MIPS
+        ```MIPS 
             add $t1, $t2, $t3 # $t1 ←- $t2 + $t3
         ```
 
@@ -191,12 +192,9 @@ procesador puede realizar directamente y que se combinan para formar programas m
 
         - <ins>Explicación del codigo</ins>: Se toma el valor del registro `$t0` y se guarda en la dirección de memoria que se obtiene de
           sumarle a la dirección de memoria de `$t1` la constante de 100.
-
-        > [!NOTE] `sw` y `lw` cargan una palabra de 32 bits. Una palabra en MIPS32 ocupa 4 bytes. Ambas instrucciones son utiles para
-        > trabajar números enteros de 32 bits o direcciones de memoria.
-
+          
     ***
-
+   
     - **Cargar Mitad**: La instrucción `lh` (load half) nos permite bajar datos desde la memoria principal hacia un registro. Su formato
       general es el siguiente:
 
@@ -216,7 +214,10 @@ procesador puede realizar directamente y que se combinan para formar programas m
 
         - <ins>Explicación del codigo</ins>: Se toma el valor del registro `$t0` y se guarda en la dirección de memoria que se obtiene de
           sumarle a la dirección de memoria de `$t1` la constante de 100.
-
-        > [!NOTE] `sh` y `lh` cargan la mitad de una palabra de 32 bits, es decir, 16 bits. Una palabra en MIPS32 ocupa 4 bytes, por lo
-        > tanto, estas dos instrucciones consideran 2 bytes. Ambas instrucciones son utiles para trabajar números enteros de 16 bits,
-        > estructuras de datos de manera eficiente y arreglos de numeros de 16 bits.
+          
+> [!NOTE]
+> `sw` y `lw` cargan una palabra de 32 bits. Una palabra en MIPS32 ocupa 4 bytes. Ambas instrucciones son utiles para
+> trabajar números enteros de 32 bits o direcciones de memoria.
+> Por otro lado, `sh` y `lh` cargan la mitad de una palabra de 32 bits, es decir, 16 bits. Una palabra en MIPS32 ocupa 4 bytes, por lo
+> tanto, estas dos instrucciones consideran 2 bytes. Ambas instrucciones son utiles para trabajar números enteros de 16 bits,
+> estructuras de datos de manera eficiente y arreglos de numeros de 16 bits.
