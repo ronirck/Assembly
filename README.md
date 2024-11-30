@@ -21,7 +21,8 @@ memoria o saltar a otra parte del código.
 -   <ins>Dificultad</ins> : Es considerado un lenguaje de programación difícil de aprender y utilizar debido a su bajo nivel de abstracción
     y la necesidad de conocer a fondo la arquitectura del procesador.
 
-[!NOTE]
+> [!NOTE]
+> El Assembly que se usara a continuación es el de MIPS 32, y se usara una extensión de vscode, "MARS MIPS Support for vscode", para su ejecución
 
 Los Registros en Assembly MIPS 32 Los registros en Assembly MIPS 32 son como pequeñas cajas de memoria dentro del procesador. Sirven para
 almacenar temporalmente datos que se están utilizando en las operaciones del programa. Imagina que son calculadoras pequeñas y rápidas donde
