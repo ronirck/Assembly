@@ -521,7 +521,7 @@ procesador puede realizar directamente y que se combinan para formar programas m
         registro destino y en caso contrario asigna 0. Su formato general es:
 
         ```MIPS
-        	slt     $s2,    $s1,    $s0
+       	    slt     $s2,    $s1,    $s0
         ```
 
         -   <ins>Comportamiento</ins>:
@@ -539,19 +539,19 @@ procesador puede realizar directamente y que se combinan para formar programas m
     -   **SLTI**: La instrucción `slti` (set on less than inmediate) se utiliza para comparar un registro y un valor inmediato o constante,
         y si el registro es menor que la constante le asigna 1 a un registro destino y en caso contrario asigna 0. Su formato general es:
 
-             ```MIPS
-             	slti    $s2,    $s0,    100
-             ```
+        ```MIPS
+            slti    $s2,    $s0,    100
+        ```
 
-             -   <ins>Comportamiento</ins>:
+        -   <ins>Comportamiento</ins>:
 
-                 ```C++
-                 	if($s0 < 100){
-                 		$s2 = 1;
-                 	}else{
-                 		$s2 = 0;
-                 	}
-                 ```
+            ```C++
+                if($s0 < 100){
+                    $s2 = 1;
+                }else{
+                    $s2 = 0;
+                }
+            ```
 
     > [!NOTE]
     >
@@ -797,12 +797,16 @@ específica y se utiliza para diferentes tipos de operaciones.
 
     ***
 
-### Comparación
+### Comparación 
+
+- **Comparación en Estructura**:
 
 | Característica | Formato R                                         | Formato I                                                                        | Formato J                                      |
 | -------------- | ------------------------------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------- |
 | Uso principal  | Operaciones aritméticas y lógicas entre registros | Acceso a memoria, operaciones aritméticas con un inmediato, saltos condicionales | Saltos incondicionales a direcciones distantes |
 | Estructura     | cod oper, rs, rt, rd, desplaz, funct              | cod oper, rs, rt, imm                                                            | cod oper, address                              |
+
+- **Comparación en Campos**:
 
 | Campos                    |                                     |                                            |                                     |
 | ------------------------- | ----------------------------------- | ------------------------------------------ | ----------------------------------- |
