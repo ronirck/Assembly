@@ -283,20 +283,20 @@ procesador puede realizar directamente y que se combinan para formar programas m
 
                 - Por lo tanto, el registro `$t0` quedará con el valor: 0000000001100100 - 0000000000000000
 
-    > [!NOTE]
-    >
-    > -   `sw` y `lw` cargan una palabra de 32 bits. Una palabra en MIPS32 ocupa 4 bytes. Ambas instrucciones son utiles para trabajar
-    >     números enteros de 32 bits o direcciones de memoria.
-    >
-    > -   `sh` y `lh` cargan la mitad de una palabra de 32 bits, es decir, 16 bits. Una palabra en MIPS32 ocupa 4 bytes, por lo tanto, estas
-    >     dos instrucciones consideran 2 bytes. Ambas instrucciones son utiles para trabajar números enteros de 16 bits, estructuras de
-    >     datos de manera eficiente y arreglos de numeros de 16 bits.
-    >
-    > -   `sb` y `lb` cargan un byte de 8 bits. Son utiles para manipular datos a nivel de byte
-    >
-    > -   `lui` tiene como función principal cargar un valor inmediato en la parte alta de un registro. Esto significa que toma un número de
-    >     16 bits y lo coloca directamente en los 16 bits más significativos (los mayores) de un registro, mientras que los 16 bits menos
-    >     significativos se ponen a cero.
+> [!NOTE]
+>
+> -   `sw` y `lw` cargan una palabra de 32 bits. Una palabra en MIPS32 ocupa 4 bytes. Ambas instrucciones son utiles para trabajar números
+>     enteros de 32 bits o direcciones de memoria.
+>
+> -   `sh` y `lh` cargan la mitad de una palabra de 32 bits, es decir, 16 bits. Una palabra en MIPS32 ocupa 4 bytes, por lo tanto, estas dos
+>     instrucciones consideran 2 bytes. Ambas instrucciones son utiles para trabajar números enteros de 16 bits, estructuras de datos de
+>     manera eficiente y arreglos de numeros de 16 bits.
+>
+> -   `sb` y `lb` cargan un byte de 8 bits. Son utiles para manipular datos a nivel de byte
+>
+> -   `lui` tiene como función principal cargar un valor inmediato en la parte alta de un registro. Esto significa que toma un número de 16
+>     bits y lo coloca directamente en los 16 bits más significativos (los mayores) de un registro, mientras que los 16 bits menos
+>     significativos se ponen a cero.
 
 ---
 
@@ -306,7 +306,7 @@ procesador puede realizar directamente y que se combinan para formar programas m
 
     ```MIPS
     	$s0     =,      4                  # 4 => 00000100
-	    $s1     =,      3                  # 3 => 00000011
+        $s1     =,      3                  # 3 => 00000011
     ```
 
     -   **AND**: Realiza una operación lógica bit a bit entre dos operandos. Es decir, compara cada bit correspondiente de ambos operandos y
@@ -455,13 +455,13 @@ procesador puede realizar directamente y que se combinan para formar programas m
 
         ***
 
-    > [!WARNING]
-    >
-    > -   Perdida de Información: `sll` y `srl` al realizar el desplazamiento, los bits más significativos pueden salirse del registro
-    >     causando una perdida de información.
-    >
-    > -   Confusión de signo: No tienen en cuenta el signo del número, si estas trabajando con números representados en complemento a2,
-    >     pueden surgir resultados inesperados
+> [!WARNING]
+>
+> -   Perdida de Información: `sll` y `srl` al realizar el desplazamiento, los bits más significativos pueden salirse del registro causando
+>     una perdida de información.
+>
+> -   Confusión de signo: No tienen en cuenta el signo del número, si estas trabajando con números representados en complemento a2, pueden
+>     surgir resultados inesperados
 
 ---
 
@@ -471,7 +471,7 @@ procesador puede realizar directamente y que se combinan para formar programas m
 
     ```MIPS
     	$s0     =,      5                  # 5 => 00000101
-	    $s1     =,      3                  # 3 => 00000011
+        $s1     =,      3                  # 3 => 00000011
     ```
 
     -   **BEQ**: La instrucción `beq` (branch if equal) se utiliza para realizar un salto condicional si dos registros tienen el mismo
@@ -510,18 +510,13 @@ procesador puede realizar directamente y que se combinan para formar programas m
             	}
             ```
 
-    > [!NOTE]
-    >
-    > Las etiquetas en MIPS32 son como señales de tráfico en un programa, indican un punto específico en el código al que se puede saltar o
-    > referenciar desde otras partes. Si queda alguna confusion podran consultar lo que son las etiquetas en un apartado más adelante.
-
     ***
 
     -   **SLT**: La instrucción `slt` (set on less than) se utiliza para comparar dos registros y si ambos son iguales le asigna 1 a un
         registro destino y en caso contrario asigna 0. Su formato general es:
 
         ```MIPS
-       	    slt     $s2,    $s1,    $s0
+            slt     $s2,    $s1,    $s0
         ```
 
         -   <ins>Comportamiento</ins>:
@@ -553,11 +548,14 @@ procesador puede realizar directamente y que se combinan para formar programas m
                 }
             ```
 
-    > [!NOTE]
-    >
-    > Aunque las instrucciones `slt` y `slti` no son instrucciones de saltos condicionales, se suelen utilizar en combinación con estas
-    > instrucciones para crear condiciones más complejas motivo por el cual se incluyen en este apartado. Sin embargo cabe resaltar que son
-    > instrucciones de operaciones aritméticas
+> [!NOTE]
+>
+> Las etiquetas en MIPS32 son como señales de tráfico en un programa, indican un punto específico en el código al que se puede saltar o
+> referenciar desde otras partes. Si queda alguna confusion podran consultar lo que son las etiquetas en un apartado más adelante.
+>
+> Aunque las instrucciones `slt` y `slti` no son instrucciones de saltos condicionales, se suelen utilizar en combinación con estas
+> instrucciones para crear condiciones más complejas motivo por el cual se incluyen en este apartado. Sin embargo cabe resaltar que son
+> instrucciones de operaciones aritméticas
 
 ---
 
@@ -640,7 +638,7 @@ procesador puede realizar directamente y que se combinan para formar programas m
 
         ```MIPS
         	li      $v0,    10
-	        syscall
+            syscall
         ```
 
         -   <ins>Comportamiento</ins>: Esta instrucción desencadena la ejecución de la llamada al sistema especificada por el valor en el
@@ -797,16 +795,16 @@ específica y se utiliza para diferentes tipos de operaciones.
 
     ***
 
-### Comparación 
+### Comparación
 
-- **Comparación en Estructura**:
+-   **Comparación en Estructura**:
 
 | Característica | Formato R                                         | Formato I                                                                        | Formato J                                      |
 | -------------- | ------------------------------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------- |
 | Uso principal  | Operaciones aritméticas y lógicas entre registros | Acceso a memoria, operaciones aritméticas con un inmediato, saltos condicionales | Saltos incondicionales a direcciones distantes |
 | Estructura     | cod oper, rs, rt, rd, desplaz, funct              | cod oper, rs, rt, imm                                                            | cod oper, address                              |
 
-- **Comparación en Campos**:
+-   **Comparación en Campos**:
 
 | Campos                    |                                     |                                            |                                     |
 | ------------------------- | ----------------------------------- | ------------------------------------------ | ----------------------------------- |
@@ -842,12 +840,12 @@ a paso
 
         main:
 
-	        li      $v0,    4
-	        la      $a0,    mss
-	        syscall
+            li      $v0,    4
+            la      $a0,    mss
+            syscall
 
-	        li      $v0,    10
-	        syscall
+            li      $v0,    10
+            syscall
     ```
 
     1. **Sección data**:
@@ -928,27 +926,27 @@ encontrar ejemplos de algoritmos mas complejos y explicados en la logica de su c
 
         ejemplo_hoja:
 
-	        addi    $sp,    $sp,    -12    # Reservamos espacio en la pila
+            addi    $sp,    $sp,    -12    # Reservamos espacio en la pila
 
-	        # Guardamos los valores de los registros temporales
-	        sw      $t0,    8($sp)
-	        sw      $t1,    4($sp)
-	        sw      $s0,    0($sp)
+            # Guardamos los valores de los registros temporales
+            sw      $t0,    8($sp)
+            sw      $t1,    4($sp)
+            sw      $s0,    0($sp)
 
-	        # Realizamos las operaciones referentes a la suma y guardamos los resultados en los registros temporales
-	        add     $t0,    $a0,    $a1
-	        add     $t1,    $a2,    $a3
+            # Realizamos las operaciones referentes a la suma y guardamos los resultados en los registros temporales
+            add     $t0,    $a0,    $a1
+            add     $t1,    $a2,    $a3
 
-	        sub     $s0,    $t0,    $t1    # Realizamos la operación de resta y guardamos el resultado en el registro temporal
+            sub     $s0,    $t0,    $t1    # Realizamos la operación de resta y guardamos el resultado en el registro temporal
 
-	        add     $v0,    $s0,    $zero  # Movemos el resultado de las operaciones al registro de salida
+            add     $v0,    $s0,    $zero  # Movemos el resultado de las operaciones al registro de salida
 
-	        # Se restaura el valor de los registros temporales a su valor original antes de entrar en el procedimiento
-	        lw      $t0,    8($sp)
-	        lw      $t1,    4($sp)
-	        lw      $s0,    0($sp)
+            # Se restaura el valor de los registros temporales a su valor original antes de entrar en el procedimiento
+            lw      $t0,    8($sp)
+            lw      $t1,    4($sp)
+            lw      $s0,    0($sp)
 
-	        addi    $sp,    $sp,    12     # Liberamos el espacio en la pila
+            addi    $sp,    $sp,    12     # Liberamos el espacio en la pila
 
-	        jr      $ra                    # Se regresa el flujo de ejecución a la etiqueta que llamo al procedimiento
+            jr      $ra                    # Se regresa el flujo de ejecución a la etiqueta que llamo al procedimiento
     ```
