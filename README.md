@@ -305,8 +305,8 @@ procesador puede realizar directamente y que se combinan para formar programas m
     Asumamos lo siguiente:
 
     ```MIPS
-    	$s0     =,      4                  # 4 => 00000100
-        $s1     =,      3                  # 3 => 00000011
+    	$s0     =     4                  # 4 => 00000100
+        $s1     =     3                  # 3 => 00000011
     ```
 
     -   **AND**: Realiza una operación lógica bit a bit entre dos operandos. Es decir, compara cada bit correspondiente de ambos operandos y
@@ -470,8 +470,8 @@ procesador puede realizar directamente y que se combinan para formar programas m
     Asumamos lo siguiente:
 
     ```MIPS
-    	$s0     =,      5                  # 5 => 00000101
-        $s1     =,      3                  # 3 => 00000011
+    	$s0     =      5                  # 5 => 00000101
+        $s1     =      3                  # 3 => 00000011
     ```
 
     -   **BEQ**: La instrucción `beq` (branch if equal) se utiliza para realizar un salto condicional si dos registros tienen el mismo
@@ -806,7 +806,7 @@ específica y se utiliza para diferentes tipos de operaciones.
 
 -   **Comparación en Campos**:
 
-| Campos                    |                                     |                                            |                                     |
+| Campos                    | Formato R                           | Formato I                                  | Formato J                           |
 | ------------------------- | ----------------------------------- | ------------------------------------------ | ----------------------------------- |
 | cod oper                  | Codigo de operación para el formato | Codigo de operación para el formato        | Codigo de operación para el formato |
 | rs                        | Registro fuente 1                   | Registro fuente                            | **No aplica**                       |
