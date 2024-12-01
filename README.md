@@ -305,7 +305,7 @@ procesador puede realizar directamente y que se combinan para formar programas m
     Asumamos lo siguiente:
 
     ```MIPS
-    	$s0     =     4                  # 4 => 00000100
+        $s0     =     4                  # 4 => 00000100
         $s1     =     3                  # 3 => 00000011
     ```
 
@@ -470,7 +470,7 @@ procesador puede realizar directamente y que se combinan para formar programas m
     Asumamos lo siguiente:
 
     ```MIPS
-    	$s0     =      5                  # 5 => 00000101
+        $s0     =      5                  # 5 => 00000101
         $s1     =      3                  # 3 => 00000011
     ```
 
@@ -637,7 +637,7 @@ procesador puede realizar directamente y que se combinan para formar programas m
         utilizarse para pasar argumentos a la llamada al sistema.
 
         ```MIPS
-        	li      $v0,    10
+            li      $v0,    10
             syscall
         ```
 
